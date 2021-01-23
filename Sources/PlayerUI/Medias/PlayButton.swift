@@ -15,11 +15,16 @@ public struct PlayButton: View {
     }
     
     public var body: some View {
-        Button(action: {
-            action?()
-        }, label: {
-            Image("play", bundle: .module)
-        })
+        VStack(alignment: .center, spacing: 4) {
+            Button(action: {
+                action?()
+            }, label: {
+                Image("play", bundle: .module)
+            })
+            
+            Text("play", bundle: .module)
+                .font(.body)
+        }
     }
 }
 

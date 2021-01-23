@@ -21,7 +21,8 @@ let package = Package(
         .target(
             name: "PlayerUI",
             dependencies: [],
-            resources: [.copy("Resources/Music")]),
+            exclude:["documents.md"],
+            resources: [.copy("Resources/Music"), .process("Resources/logo.png")]),
         .testTarget(
             name: "PlayerUITests",
             dependencies: ["PlayerUI"]),
